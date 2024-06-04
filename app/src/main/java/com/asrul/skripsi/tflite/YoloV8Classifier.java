@@ -47,7 +47,7 @@ import java.util.Vector;
  * - https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
  * - https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tensorflowlite.md#running-our-model-on-android
  */
-public class YoloV4Classifier implements Classifier {
+public class YoloV8Classifier implements Classifier {
 
     /**
      * Initializes a native TensorFlow session for classifying images.
@@ -63,7 +63,7 @@ public class YoloV4Classifier implements Classifier {
             final String labelFilename,
             final boolean isQuantized)
             throws IOException {
-        final YoloV4Classifier d = new YoloV4Classifier();
+        final YoloV8Classifier d = new YoloV8Classifier();
 
         String actualFilename = labelFilename.split("file:///android_asset/")[1];
         InputStream labelsInput = assetManager.open(actualFilename);
@@ -149,7 +149,7 @@ public class YoloV4Classifier implements Classifier {
 
     private static final float IMAGE_STD = 255.0f;
 
-    //config yolov4
+    //config yolov8
     private static final int INPUT_SIZE = 416;
     private static final int[] OUTPUT_WIDTH = new int[]{52, 26, 13};
 
@@ -169,7 +169,7 @@ public class YoloV4Classifier implements Classifier {
     // tiny or not
     private static boolean isTiny = true;
 
-    // config yolov4 tiny
+    // config yolov8 tiny
     private static final int[] OUTPUT_WIDTH_TINY = new int[]{2535, 2535};
     private static final int[] OUTPUT_WIDTH_FULL = new int[]{10647, 10647};
     private static final int[][] MASKS_TINY = new int[][]{{3, 4, 5}, {1, 2, 3}};
@@ -189,7 +189,7 @@ public class YoloV4Classifier implements Classifier {
 
     private Interpreter tfLite;
 
-    private YoloV4Classifier() {
+    private YoloV8Classifier() {
     }
 
     //non maximum suppression

@@ -38,7 +38,7 @@ import com.asrul.skripsi.env.BorderedText;
 import com.asrul.skripsi.env.ImageUtils;
 import com.asrul.skripsi.env.Logger;
 import com.asrul.skripsi.tflite.Classifier;
-import com.asrul.skripsi.tflite.YoloV4Classifier;
+import com.asrul.skripsi.tflite.YoloV8Classifier;
 import com.asrul.skripsi.tracking.MultiBoxTracker;
 
 import java.io.IOException;
@@ -54,7 +54,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
     private static final int TF_OD_API_INPUT_SIZE = 416;
     private static final boolean TF_OD_API_IS_QUANTIZED = false;
-    private static String TF_OD_API_MODEL_FILE = "custom-416.tflite";
+    private static String TF_OD_API_MODEL_FILE = "best.tflite";
 
     private static String TF_OD_API_LABELS_FILE = "file:///android_asset/custom.txt";
 
@@ -99,7 +99,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
         try {
             detector =
-                    YoloV4Classifier.create(
+                    YoloV8Classifier.create(
                             getAssets(),
                             TF_OD_API_MODEL_FILE,
                             TF_OD_API_LABELS_FILE,
@@ -262,10 +262,10 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     protected void setUseKata(boolean isChecked) {
         runInBackground(() -> {
             TF_OD_API_LABELS_FILE = "file:///android_asset/custom_kata.txt";
-            TF_OD_API_MODEL_FILE = "custom-416.tflite";
+            TF_OD_API_MODEL_FILE = "best.tflite";
             try {
                 detector =
-                        YoloV4Classifier.create(
+                        YoloV8Classifier.create(
                                 getAssets(),
                                 TF_OD_API_MODEL_FILE,
                                 TF_OD_API_LABELS_FILE,

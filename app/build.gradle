@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.asrul.skripsi"
         minSdkVersion 22
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -38,6 +38,14 @@ android {
 }
 
 project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+
+tasks.withType(JavaExec) {
+    jvmArgs '--add-opens', 'java.base/java.io=ALL-UNNAMED'
+}
+
+tasks.withType(Test) {
+    jvmArgs '--add-opens', 'java.base/java.io=ALL-UNNAMED'
+}
 
 dependencies {
 

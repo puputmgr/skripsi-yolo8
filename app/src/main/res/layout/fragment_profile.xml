@@ -55,8 +55,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imgProfile"
-                tools:text="Muhammad Asrul Aji Pangestu" />
-
+                tools:text="Puput Mangge Rahayu" />
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
@@ -66,7 +65,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvName"
-                tools:text="asrulajipangestu@gmail.com" />
+                tools:text="puputmangge123@gmail.com" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="18dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Tentang Developer"
+                    android:text="Tentang Aplikasi"
                     android:textColor="@color/color_primary"
                     android:textSize="11sp" />
 
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Muhammad Asrul Aji Pangestu"
+                    android:text="Puput Mangge Rahayu"
                     android:textColor="@color/color_primary"
                     android:textSize="16sp" />
 
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:text="17670067"
+                    android:text="20670047"
                     android:textColor="@color/color_primary" />
 
                 <TextView
@@ -119,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins"
-                    android:text="asrulajipangestu@gmail.com"
+                    android:text="puputmangge123@gmail.com"
                     android:textColor="@color/color_background"
                     android:textSize="12sp" />
 
@@ -128,16 +128,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="GitHub"
+                    android:text="Aplikasi ini dibuat bertujuan untuk sahabat tuna rungu dan tuna wicara yang bernama BI (Bisa Isyarat) "
                     android:textColor="@color/color_primary" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="LinkedIn"
-                    android:textColor="@color/color_primary" />
             </LinearLayout>
+
+
         </androidx.cardview.widget.CardView>
 
         <Button

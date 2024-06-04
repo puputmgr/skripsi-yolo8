@@ -4,21 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_background"
+    android:background="@color/color_primary"
     tools:context="com.asrul.skripsi.ui.auth.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_auth_bg"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bi2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
 
         <TextView
             android:id="@+id/txtLoginGreeting"
@@ -26,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Welcome Back!"
+            android:text=""
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@id/imgLogo"
@@ -49,14 +54,19 @@
                 android:orientation="vertical"
                 android:padding="24dp">
 
+
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Login"
+                    android:text="Masuk"
                     android:textColor="@color/color_primary"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/CustomForm"
@@ -68,7 +78,7 @@
                         android:id="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_form_message"
+                        android:drawableStart="@drawable/ic_email"
                         android:drawablePadding="12dp"
                         android:hint="Email"
                         android:inputType="textEmailAddress"
@@ -87,9 +97,9 @@
                         android:id="@+id/edtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_form_lock"
+                        android:drawableStart="@drawable/ic_katasandi"
                         android:drawablePadding="12dp"
-                        android:hint="Password"
+                        android:hint="Kata Sandi"
                         android:inputType="textPassword"
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -100,12 +110,12 @@
             android:id="@+id/btnLogin"
             style="@style/CustomButtonSolid"
             android:layout_marginStart="42dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="56dp"
             android:layout_marginEnd="42dp"
-            android:layout_marginBottom="12dp"
-            android:text="Login"
-            android:textColor="@color/color_primary"
+            android:text="Masuk"
+            android:textColor="@color/tfe_color_primary"
             app:layout_constraintEnd_toEndOf="@id/cvLoginForm"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/cvLoginForm"
             app:layout_constraintTop_toBottomOf="@+id/cvLoginForm" />
 
@@ -125,7 +135,7 @@
             style="@style/CustomButtonStroke"
             android:layout_marginBottom="18dp"
             android:layout_marginTop="8dp"
-            android:text="G  Login with Google"
+            android:text="G  Masuk Dengan Google"
             android:textColor="@android:color/white"
             app:layout_constraintStart_toStartOf="@id/btnLogin"
             app:layout_constraintEnd_toEndOf="@id/btnLogin"
@@ -139,7 +149,7 @@
             android:layout_marginBottom="32dp"
             android:layout_marginTop="18dp"
             android:fontFamily="@font/poppins"
-            android:text="Don't have an account? Register"
+            android:text="Belum punya akun? Daftar"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="12sp"

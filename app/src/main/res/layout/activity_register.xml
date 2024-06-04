@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_background"
+    android:background="@color/color_primary"
     tools:context="com.asrul.skripsi.ui.auth.register.RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_auth_bg"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bi2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
 
         <TextView
             android:id="@+id/txtLoginGreeting"
@@ -26,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Create an account."
+            android:text=""
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@id/imgLogo"
@@ -50,13 +53,16 @@
                 android:padding="24dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Register"
+                    android:text="Daftar"
                     android:textColor="@color/color_primary"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/CustomForm"
@@ -68,9 +74,9 @@
                         android:id="@+id/edtUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Username"
+                        android:hint="Nama Pengguna"
                         android:drawablePadding="12dp"
-                        android:drawableStart="@drawable/ic_form_profile"
+                        android:drawableStart="@drawable/ic_person"
                         android:inputType="textPersonName"
                         android:paddingStart="18dp"
                         android:paddingEnd="18dp" />
@@ -88,8 +94,19 @@
                         android:layout_height="wrap_content"
                         android:hint="Email"
                         android:drawablePadding="12dp"
-                        android:drawableStart="@drawable/ic_form_message"
+                        android:drawableStart="@drawable/ic_email"
                         android:inputType="textEmailAddress"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPassword2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_katasandi"
+                        android:drawablePadding="12dp"
+                        android:hint="Verifikasi Kata Sandi"
+                        android:inputType="textPassword"
                         android:paddingStart="18dp"
                         android:paddingEnd="18dp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -104,11 +121,11 @@
                         android:id="@+id/edtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="Kata Sandi"
                         android:paddingStart="18dp"
                         android:paddingEnd="18dp"
                         android:drawablePadding="12dp"
-                        android:drawableStart="@drawable/ic_form_lock"
+                        android:drawableStart="@drawable/ic_katasandi"
                         android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,16 +136,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtPassword2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Verify Password"
-                        android:paddingStart="18dp"
-                        android:paddingEnd="18dp"
-                        android:drawablePadding="12dp"
-                        android:drawableStart="@drawable/ic_form_lock"
-                        android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -140,7 +147,7 @@
             android:layout_marginStart="42dp"
             android:layout_marginEnd="42dp"
             android:layout_marginBottom="12dp"
-            android:text="Register"
+            android:text="Daftar"
             android:textColor="@color/color_primary"
             app:layout_constraintEnd_toEndOf="@id/cvRegisterForm"
             app:layout_constraintStart_toStartOf="@id/cvRegisterForm"
@@ -163,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
-            android:text="Already have an account? Login"
+            android:text="Sudah punya akun? Masuk"
             android:textAllCaps="false"
             android:textSize="12sp"
             android:textColor="@android:color/white"

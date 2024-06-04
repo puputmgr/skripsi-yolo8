@@ -16,35 +16,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Skripsi"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".ui.home.news.NewsWebViewActivity"
             android:exported="true" />
+
         <activity
             android:name=".ui.home.alphabet.AlphabetActivity"
             android:exported="true" />
-        <activity android:name=".ui.home.word.WordActivity" />
-        <activity android:name=".ui.auth.login.LoginActivity" />
-        <activity android:name=".ui.auth.register.RegisterActivity" />
-        <activity android:name=".ui.SplashScreenActivity">
+
+        <activity
+            android:name=".ui.home.word.WordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.auth.register.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.detection.DetectorActivity"
             android:label="@string/tfe_od_app_name"
-            android:screenOrientation="portrait" />
-        <activity android:name=".ui.MainActivity">
+            android:screenOrientation="portrait"
+            android:exported="false" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false">
+            <!-- If you plan to use MainActivity as an entry point in the future, uncomment the following lines and set android:exported="true" -->
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
         </activity>
+
     </application>
 
 </manifest>
